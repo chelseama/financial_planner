@@ -52,7 +52,7 @@ def parse_categorized_csv(csvfile):
 
 def write_csv(csvfile, dict_data, csv_columns):
     print('Writing File: ', csvfile)
-    with open(csvfile, 'w') as file:
+    with open(csvfile, 'w+') as file:
         writer = csv.DictWriter(file, fieldnames=csv_columns)
         writer.writeheader()
         for data in dict_data:

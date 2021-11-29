@@ -3,3 +3,5 @@
 /backend/category_classifier
 /backend/__pycache__
 /cma-app/node_modules
+/vm
+*.pyc

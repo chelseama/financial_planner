@@ -1,6 +1,5 @@
 import csv_io
 from model import CategoryClassifier
-import transaction_manager
 import os
 from datetime import datetime
 
@@ -56,23 +55,9 @@ class TransactionManager:
 
     def write_categorized_transactions(self):
         csv_columns = ['date', 'vendor', 'price', 'category']
-        csv_io.write_csv(self.categorized_transactions_path,
+        csv_io.write_csv(BASE_DIR+self.categorized_transactions_path,
                          self.categorized_transactions, csv_columns)
 
     def get_categorized_transactions(self):
-        '''
-        output list of dictionary
-        '''
-        items = csv_io.parse_scotiabank_csv(
-            self.categorized_transactions_path)
-        return items
-
-
-manager = TransactionManager(2021, 9)
-manager.merge_inputs()
-manager.sort_transactions_by_date()
-print(manager.sorted_transactions)
-
-manager.categorize_inputs()
-print(manager.categorized_transactions)
-print()
+        self.categorized_transactions = csv_io.parse_categorized_csv(
+            BASE_DIR+self.categorized_transactions_path)

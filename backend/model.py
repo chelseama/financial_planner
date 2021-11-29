@@ -1,24 +1,11 @@
 import torch
 import transformers as tfmr
 
-categories2 = {
-    'Maintenance': ['Car', 'Home', 'Clothing'],
-    'Education': ['Books'],
-    'Entertainment': ['Movie', 'Concert', 'Games'],
-    'Food and Drink': ['Groceries', 'Restaurants', 'Alcohol'],
-    'Gift': ['Birthday', 'Wedding', 'Anniversary', 'Specal Occasion'],
-    'Healthcare': ['Gym', 'Equipment', 'Pads', 'Drugs'],
-    'Hobbies': ['Knitting', 'Painting', 'Sports', 'Plants'],
-    'Home': ['Rent', 'Moving'],
-    'Household Items': ['Toiletries', 'Laundry', 'Dishwash', 'Cleaning', 'Tools'],
-    'Payments': ['Tax', 'Subscriptions', 'Government'],
-    'Utilities': ['Cell', 'Internet', 'TV', 'Electricity'],
-    'Transportation': ['Public Transit', 'Car Payment', 'Bike'],
-    'Travel': ['Transit', 'Food', 'Shopping', 'Sightseeing'],
-    'Income': ['Salary', 'Credit Card Payment'],
-    'Shopping': ['Clothing', 'Accessories', 'Home Decor', 'Cosmetics', 'Stationery'],
-    'Investment': ['Retirement', 'Savings']
-}
+categories2 = [
+    'Education', 'Entertainment', 'Food and Drink', 'Gift', 'Healthcare', 'Hobbies',
+    'Home Rent', 'Household Item', 'Payment', 'Transportation', 'Travel', 'Income',
+    'Shopping', 'Investment', 'Miscellaneous'
+]
 
 categories = ['Clothing', 'Communications', 'Education', 'Entertainment', 'Food and Drink',
               'Gift', 'Healthcare', 'Hobbies', 'Home', 'Rent', 'Transportation', 'Travel', 'Wedding']
