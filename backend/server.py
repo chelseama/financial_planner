@@ -51,7 +51,3 @@ def all_transactions():
     res.headers.add('Access-Control-Allow-Origin', '*')
     return res
 
-
-@ app.route('/savings')
-def all_savings():
-    return
