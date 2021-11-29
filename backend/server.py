@@ -12,7 +12,7 @@ def sort_by_category(transactions):
 
 
 def get_balance(transactions):
-    total, plus, minus = 0
+    total, plus, minus = 0, 0, 0
     for entry in transactions:
         p = round(float(entry['price']), 2)
         total += p
@@ -50,4 +50,3 @@ def all_transactions():
     res = jsonify(res)
     res.headers.add('Access-Control-Allow-Origin', '*')
     return res
-
